@@ -1,5 +1,19 @@
 // Home Content
 
+.navigation{
+  .flex(column, center, center);
+  background-color:@wild-sand;
+  h1{
+    margin:2rem;
+    font-size:5rem;
+  }
+}
+
+.headerimg{
+  border-radius:5px;
+  max-width:100%
+}
+
 .home {
 
   .intro {
@@ -18,6 +32,15 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    @media @phone{
+      justify-content: center;
+      .blast{
+        width:90%;
+      }
+      .sky, .launch{
+        display:none;
+      }
+    }
 
     img {
       width: 28%;
@@ -45,6 +68,12 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @phone{
+      padding:15px 15px;
+      .walk-text{
+        width:100%;
+      }
+    }
 
     .walk-text {
       width: 50%;
@@ -58,17 +87,55 @@
       }
 
       .btn {
+        .buttonstyle(@btn-bg-color, @sea-shell, 15rem);
+        @media @phone{
+          margin-left:5%;
+          margin-right:5%;
+          .buttonstyle(@btn-bg-color, @sea-shell, 90%);
+        }
+        &:hover{
+          .buttonstyle(@sea-shell, @btn-bg-color, 15rem);
+          @media @phone{
+            margin-left:5%;
+            margin-right:5%;
+            .buttonstyle(@sea-shell, @btn-bg-color, 90%);
+          }
+        } 
       }
+    }
+    
+    .mobile{
+      display:none;
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      margin-top:10%;
+      margin-bottom:10%;
+      animation:tiltandbob 5s linear 2s infinite alternate;
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }
+    }
+
+    @media @phone{
+      .flex(column, center, center);
+      margin-top:10px;
+      .walk-text {
+        width: 100%;
+      }
+      .walk-img {
+        width: 50%;
+      }
+      .mobile{
+        display:flex;
+      }
+      .desktop{
+        display:none;
       }
     }
   }
