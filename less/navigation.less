@@ -4,6 +4,10 @@ nav{
     text-align:center;
     width:30%;
     .flex(row, space-between, center);
+    @media screen and (max-width: 1500px){
+        width:100%;
+        .flex(row, space-around, center);
+    }
     a{
         text-decoration:none;
         font-size:2rem;

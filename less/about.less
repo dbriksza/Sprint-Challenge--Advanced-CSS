@@ -1,0 +1,19 @@
+.crew{
+    .flex(row, space-between, center);
+    flex-wrap:wrap;
+    @media screen and (max-width: 1000px){
+        .flex(column, center, center);
+    }
+    div{
+        border:10px solid @shuttle-gray;
+        width:40%;
+        margin:15px;
+        padding:10px;
+        @media screen and (max-width: 1000px){
+            width: 90%;
+        }
+        img{
+            max-width:80%;
+        }
+    }
+}
