@@ -1,5 +1,18 @@
 // Home Content
 
+.navigation{
+  .flex(column, center, center);
+  background-color:@wild-sand;
+  h1{
+    margin:2rem;
+    font-size:5rem;
+  }
+}
+
+.headerimg{
+  border-radius:5px;
+}
+
 .home {
 
   .intro {
@@ -58,6 +71,10 @@
       }
 
       .btn {
+        .buttonstyle(@btn-bg-color, @sea-shell);
+        &:hover{
+          .buttonstyle(@sea-shell, @btn-bg-color);
+        }
       }
     }
 
